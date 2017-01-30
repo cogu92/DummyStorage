@@ -28,6 +28,7 @@
       </ViewImpl>
       <TabImpl />
       <TabImpl>
+        <option name="bottomProportion" value="0.0" />
         <option name="defaultIndex" value="1" />
         <option name="index" value="1" />
       </TabImpl>
@@ -41,7 +42,9 @@
         <option name="tabIndex" value="0" />
         <option name="window" value="0" />
       </ViewImpl>
-      <TabImpl />
+      <TabImpl>
+        <option name="bottomProportion" value="0.0" />
+      </TabImpl>
       <General />
     </runner>
   </component>
