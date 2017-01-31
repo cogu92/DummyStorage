@@ -18,6 +18,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
    private TextView mTxtVwInfo  ;
+    private TextView mTxtVwLog ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         this.mTxtVwInfo= (TextView) findViewById(R.id.tv_show);
         this.mTxtVwInfo.setHeight(0);
+        this.mTxtVwLog= (TextView) findViewById(R.id.textViewlog);
+        this.mTxtVwLog.setText("");
 
 
         //  View view = findViewById(R.id.button);
@@ -116,7 +119,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId()==R.id.button)
         {
-            Log.i("OnClickClass()","1111111111");
+           Log.i("OnClickClass()","1111111111");
+            String previw = this.mTxtVwLog.getText().toString();
+            this.mTxtVwLog.setText(previw+ "Start 1 \n");
+
         }
         else if (v.getId()==R.id.button2)
         {
@@ -126,6 +132,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         else if (v.getId()==R.id.button3)
         {
             Log.e("OnClickClass()","33333333333");
+            String previw = this.mTxtVwLog.getText().toString();
+            this.mTxtVwLog.setText(previw+"Start 3  \n");
 
         }
     }
@@ -148,6 +156,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("My Text Value",this.mTxtVwInfo.getText().toString());
+        outState.putString("My Textlog Value",this.mTxtVwLog.getText().toString());
              outState.putInt("My Height Value",this.mTxtVwInfo.getHeight());
     }
 
@@ -155,9 +164,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         String returnString = savedInstanceState.getString("My Text Value");
-             int returnHeight = savedInstanceState.getInt("My Height Value");
+        String returnStringlog = savedInstanceState.getString("My Text Value");
+             int returnHeight = savedInstanceState.getInt("My Textlog Value");
         this.mTxtVwInfo.setText(returnString);
                 this.mTxtVwInfo.setVisibility(View.VISIBLE);
         this.mTxtVwInfo.setHeight(returnHeight);
+        this.mTxtVwLog.setText(returnStringlog);
     }
 }

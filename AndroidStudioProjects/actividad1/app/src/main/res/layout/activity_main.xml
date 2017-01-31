@@ -19,7 +19,7 @@
         android:text="Buttonstar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/Buttonstar"
          android:id="@+id/button"
 
         />
@@ -28,7 +28,7 @@
         android:text="Buttonstar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/Buttonstar2"
         android:id="@+id/button2"
 
         />
@@ -36,9 +36,15 @@
         android:text="Buttonstar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/Buttonstar3"
         android:id="@+id/button3"
                 />
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewlog"
+        android:layout_weight="0.25" />
 
 </LinearLayout>
