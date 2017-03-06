@@ -157,7 +157,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onSaveInstanceState(outState);
         outState.putString("My Text Value",this.mTxtVwInfo.getText().toString());
         outState.putString("My Textlog Value",this.mTxtVwLog.getText().toString());
-             outState.putInt("My Height Value",this.mTxtVwInfo.getHeight());
+        outState.putInt("My Height Value",this.mTxtVwInfo.getHeight());
     }
 
     @Override
@@ -165,9 +165,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onRestoreInstanceState(savedInstanceState);
         String returnString = savedInstanceState.getString("My Text Value");
         String returnStringlog = savedInstanceState.getString("My Text Value");
-             int returnHeight = savedInstanceState.getInt("My Textlog Value");
+        int returnHeight = savedInstanceState.getInt("My Textlog Value");
         this.mTxtVwInfo.setText(returnString);
-                this.mTxtVwInfo.setVisibility(View.VISIBLE);
+        this.mTxtVwInfo.setVisibility(View.VISIBLE);
         this.mTxtVwInfo.setHeight(returnHeight);
         this.mTxtVwLog.setText(returnStringlog);
     }

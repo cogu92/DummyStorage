@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    Intent i = new Intent("android.intent.action.VIEW", Uri.parse("http://wp.me/p1hdS4-zS"));
-                    startActivity(i);
+                    Vibrator v1 = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                    long [] patron = {0, 600, 100, 9000, 600};
+                    v1.vibrate(patron,3);
                 }
             });
 

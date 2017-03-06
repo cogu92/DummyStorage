@@ -2,6 +2,16 @@
   <component name="FindRecents">
     <findStrings>
       <find>mBownService</find>
+      <find>LocalBroadcastManager</find>
+      <find>LocalBroadcastReceiver</find>
+      <find>id_verdocumentacion</find>
+      <find>b_verdocumentacion</find>
+      <find>myLocalBrodcas</find>
+      <find>BROADCAST</find>
+      <find>gridLayout2</find>
+      <find>gridLayout2content_header_grid</find>
+      <find>k</find>
+      <find>google_maps_key</find>
     </findStrings>
   </component>
 </application>
